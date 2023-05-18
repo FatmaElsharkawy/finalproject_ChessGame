@@ -2,7 +2,7 @@
 # Chess Game
 This is a collaborative project developed by a team of five members: Fatma Said, Madonna Mosaad, Ammar Yasser, Mohamed Salah, and Mohamed Walid. The project aims to create a chess game with a graphical user interface (GUI) and additional features such as user authentication and a score table.
 
-### Team Members and Contributions
+## Team Members and Contributions
 ##### 1. Fatma Said:  
 Contribution: UML Diagram creation, GUI Wireframe creation, Bug fixes, Logic implementation (Move, checkmate, stalemate), Chessboard, Pieces, Squares finalization.
 Description: Fatma played a significant role in the project. She helped create the UML diagram and GUI wireframe during the design phase. Fatma contributed to bug fixing and improving the codebase. She implemented the Move class to handle piece movement and highlight valid moves. Additionally, Fatma developed the checkmate and stalemate logic and finalized the Chessboard, Pieces, and Squares classes.  
