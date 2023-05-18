@@ -32,7 +32,8 @@ The chess game project incorporates the following features:
 
 
 ## UML Diagram
-![b5f2b626-647d-4a55-bb16-11160401e4d6](https://github.com/momowalid/Chess-Game-Project/assets/127145133/59bcb678-670a-44ca-83dd-3c933da3a99b)
+![UML class](https://github.com/sbme-tutorials/finalproject_chessgame-chessgame/assets/108475322/49daca3e-3e93-49ff-a304-823a8081bfc7)
+
 
 
 ## Gannt Chart
