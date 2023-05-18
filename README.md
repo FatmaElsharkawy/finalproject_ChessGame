@@ -1,5 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/s-rx3t9_)
 # Chess Game
+This is a collaborative project developed by a team of five members: Fatma Said, Madonna Mosaad, Ammar Yasser, Mohamed Salah, and Mohamed Walid. The project aims to create a chess game with a graphical user interface (GUI) and additional features such as user authentication and a score table.
+
 ### Team Members and Contributions
 ##### 1. Fatma Said:  
 Contribution: UML Diagram creation, GUI Wireframe creation, Bug fixes, Logic implementation (Move, checkmate, stalemate), Chessboard, Pieces, Squares finalization.
@@ -16,6 +18,19 @@ Description: Mohammed Salah made significant contributions in the early stages o
 ##### 5. Mohamed Walid:  
 Contribution: Timer functionality implementation, README documentation writing.
 Description: Mohammed Walid implemented the timer functionality, managing time limits for each player's turn. He also wrote a detailed README documentation file to provide comprehensive information about the project.
+
+##Features
+The chess game project incorporates the following features:
+
+- Chessboard: The Chessboard class represents the game board and manages the placement and movement of chess pieces.
+- Pieces: Different chess pieces such as pawn, rook, knight, bishop, queen, and king are implemented as separate classes.
+- Move: The Move class handles the movement of chess pieces and highlights valid moves for the selected piece.
+- User Authentication: The project includes a login and registration system to allow users to access the game with their own accounts.
+- Score Table: The Score class manages a table to record game results, including winners, losers, draws, and game durations.
+- Graphical User Interface: The GUI provides an interactive and visually appealing interface for the chess game, including the login/register page, the game board, and the score table.
+- Timer Functionality: A timer is implemented to manage time limits for each player's turn, enhancing the gameplay experience.
+
+
 ## UML Diagram
 ![b5f2b626-647d-4a55-bb16-11160401e4d6](https://github.com/momowalid/Chess-Game-Project/assets/127145133/59bcb678-670a-44ca-83dd-3c933da3a99b)
 
