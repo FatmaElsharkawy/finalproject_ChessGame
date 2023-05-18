@@ -324,14 +324,7 @@ public class Move {
 				if(rowinitial==7&&rowfinal==7&&(((colinitial==0&&colfinal==4)||(colinitial==7&&colfinal==4))||((colfinal==0&&colinitial==4)||(colfinal==7&&colinitial==4)))){
 					return Game.isCastling(rowinitial,colinitial,rowfinal,colfinal);
 		}}}
-		
-	        	//player 1 is white player 
-				if(player1.isTurn()) { 
-				   if (colorpiece.equals(player2.getColor())) { return false;}}
-				//player 2 is black player
-				else if(player2.isTurn()) {if (colorpiece.equals(player1.getColor())) {
-					 return false;}}
-				
+	
 		
 		if (colorpiece.equals(coloroccupied)) return false;
 		
