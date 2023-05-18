@@ -19,7 +19,7 @@ Description: Mohammed Salah made significant contributions in the early stages o
 Contribution: Timer functionality implementation, README documentation writing.
 Description: Mohammed Walid implemented the timer functionality, managing time limits for each player's turn. He also wrote a detailed README documentation file to provide comprehensive information about the project.
 
-##Features
+## Features
 The chess game project incorporates the following features:
 
 - Chessboard: The Chessboard class represents the game board and manages the placement and movement of chess pieces.
