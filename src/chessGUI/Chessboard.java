@@ -8,14 +8,13 @@ import static chessGUI.Data.saveData;
 
 public class Chessboard implements ActionListener{
 	
-
+    Move move; Game game;
 	
 	static int intialrow;
 	static int intialcol;
 	static int finalrow;
 	static int finalcol;   
-	
-	int n=1; int count =0;
+	int count;
 
 	static boolean kbfm=true; static boolean kwfm=true;
 	static boolean rbleft=true; static boolean rbright=true;
@@ -27,10 +26,7 @@ public class Chessboard implements ActionListener{
 	boolean ischeckmate=false;
 	
   Player player1; Player player2;
-   private Game game; 
-   private Move move;
-  
-
+   
 	static Square[][] array = new Square[8][8];
 	static JPanel panelBlack=new JPanel();
 	static JPanel panelWhite=new JPanel();
@@ -80,7 +76,7 @@ public class Chessboard implements ActionListener{
 		player1 = new Player(player1Name, "White", time);
 		player2 = new Player(player2Name, "Black", time);
 	    this.game=new Game(player1, player2);
-	    this.move = new Move(this, player1, player2);
+	    this.move = new Move(player1, player2);
 	     player1.setTurn(true);
 	     new GUI(player1,player2);
 	    
@@ -105,17 +101,15 @@ public class Chessboard implements ActionListener{
 							intialrow= array[finalR][finalC].getRow();
 							intialcol=array[finalR][finalC].getCol();
 							
-							if((player1.isTurn()&&(count==4*n-3))){ n++; move.highlightLegalMove(intialrow,intialcol);  System.out.print(count+ "1 and n ="+n);} 
-						    else if(player2.isTurn()&&(count==4*(n-1)-1)) { move.highlightLegalMove(intialrow,intialcol);  System.out.print(count+ "2 and n ="+n);}
-							else {System.out.print(count+ "3 and n ="+n); count--; n--; } 
-					
-							
+							if((player1.isTurn()&&Move.pieceAt(intialrow, intialcol).getColor().equals("White"))){ move.highlightLegalMove(intialrow,intialcol);  System.out.print("white piece");} 
+						    else if(player2.isTurn()&&Move.pieceAt(intialrow, intialcol).getColor().equals("Black")) { move.highlightLegalMove(intialrow,intialcol);  System.out.print("black piece");}
+						    else { count=0; GUI.showWindowFalseTurn();}	
 						}
 						
 					  else  {
 							finalrow= array[finalR][finalC].getRow();
 							finalcol=array[finalR][finalC].getCol();
-							
+						//to update the first move of king and rook	
 							kbfm=Move.getBlackKing().KBFM();
 							kwfm=Move.getWhiteKing().KWFM();
 							rbleft=Move.getBlackRookLeft().RBLeft();
@@ -129,22 +123,22 @@ public class Chessboard implements ActionListener{
 						
 						  if(!isstalemate&&!ischeckmate&&!player1.isTimeEnded()&&!player2.isTimeEnded()) {
 							player1.startTimer();
-							if(player1.isTurn()) {
-						        Move.movePiece(intialrow,intialcol,finalrow,finalcol);
+							if(player1.isTurn()) { 
+							    Move.movePiece(intialrow,intialcol,finalrow,finalcol);
+							    if(Move.pieceAt(finalrow,finalcol)!=null) {
 								player1.stopTimer();
 								player1.setTurn(false);
 								player2.setTurn(true);
-								player2.startTimer();  
-								}
-							         
+								player2.startTimer();  }
+								}      
 							    else if(player2.isTurn()) {
-								System.out.println("eneter player two turrn");
-								Move.movePiece(intialrow,intialcol,finalrow,finalcol);
+							    Move.movePiece(intialrow,intialcol,finalrow,finalcol);
+							    if(Move.pieceAt(finalrow,finalcol)!=null) {
 								player2.stopTimer();
 								player1.setTurn(true);
 								player2.setTurn(false);
-								player1.startTimer();
-							    }
+								player1.startTimer();}  
+					            } 
 						resetBoardColors();
 							  }
 						  
