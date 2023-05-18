@@ -46,7 +46,7 @@ public class Page extends JFrame implements ActionListener {
         frame.setLocationRelativeTo(null);
       //  frame.setResizable(false); // if we don't need the user to be able to change size of the window.
 
-ImageIcon backImage =new ImageIcon("chess.jpg");
+ImageIcon backImage =new ImageIcon("chess.jpeg");
 Image img =backImage.getImage();
 Image tempImage = img.getScaledInstance(700,800,Image.SCALE_SMOOTH);
 backImage =new ImageIcon(tempImage);
