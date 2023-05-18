@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 import java.util.List;
 import javax.swing.*;
-
+import static chessGUI.DataHistory.readDataHistory;
 import static chessGUI.DataHistory.saveDataHistory;
 
 public class RegisterationForm implements ActionListener{
@@ -80,6 +80,8 @@ public class RegisterationForm implements ActionListener{
 
         if(e.getSource()==cancelButton) {
     frame.dispose();
+    List<String> history = readDataHistory();
+	Login login= new Login(history);
         }
 
         if(e.getSource()==registerButton) {
@@ -112,11 +114,10 @@ else{
                 saveDataHistory("new account");
                 saveDataHistory(name);
                 saveDataHistory(password);
-                   // messageLabel.setForeground(Color.green);
-                  //  messageLabel.setText("register successful");
-
+                   
                         frame.dispose();
-                        //WelcomePage welcomePage = new WelcomePage(userID);
+                        List<String> history = readDataHistory();
+                		Login login= new Login(history);
                 }}
                 else {
                 messageLabel.setForeground(Color.red);
