@@ -77,3 +77,5 @@ The chess game project incorporates the following features:
 ## Stalemate
 ![a4a296c4-8f24-4822-aa62-6b6516be8d4d](https://github.com/momowalid/Chess-Game-Project/assets/127145133/49c5b4fd-28eb-45f7-8089-807811ca3cbb)
 
+## Turn Based Player Switch
+https://github.com/sbme-tutorials/finalproject_chessgame-chessgame/assets/108475322/6600d581-3d48-4a57-84d4-eb6a4fcb2ac8
